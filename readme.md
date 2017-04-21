@@ -1,6 +1,6 @@
 # Laravel Mpdf: Using Mpdf in Laravel 5 for generate Pdfs
 
-> Easily generate PDF documents from HTML right inside of Laravel using this mPDF wrapper.
+> Easily generate PDF documents from HTML right inside of Laravel using this mpdf wrapper.
 
 
 ## Installation
@@ -43,7 +43,8 @@ To use Laravel Mpdf add something like this to one of your controllers. You can 
 //....
 use PDF;
 class ReportController extends Controller {
-	function generate_pdf() {
+	public function generate_pdf() 
+	{
 		$data = [
 			'foo' => 'bar'
 		];
