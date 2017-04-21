@@ -1,6 +1,6 @@
 {
     "name": "carlos-meneses/laravel-mpdf",
-    "description": "Generate PDFs in Laravel with this mPDF wrapper.",
+    "description": "Laravel Mpdf: Using Mpdf in Laravel 5 for generate Pdfs.",
     "keywords": ["mpdf", "pdf", "laravel"],
     "license": "MIT",
     "require": {
