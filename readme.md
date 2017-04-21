@@ -1,11 +1,19 @@
-# Laravel PDF: mPDF wrapper for Laravel 5
+# Laravel Mpdf: Using Mpdf in Laravel 5 for generate Pdfs
 
 > Easily generate PDF documents from HTML right inside of Laravel using this mPDF wrapper.
 
 
 ## Installation
 
-Require this package in your `composer.json` or install it by running:
+Require this package in your `composer.json` 
+
+```
+"require": {
+	carlos-meneses/laravel-pdf: "^1.0"
+}
+```
+
+or install it by running:
 
 ```
 composer require carlos-meneses/laravel-pdf
@@ -16,30 +24,32 @@ To start using Laravel, add the Service Provider and the Facade to your `config/
 ```php
 'providers' => [
 	// ...
-	Meneses\LaravelPdf\PdfServiceProvider::class
+	Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class
 ]
 ```
 
 ```php
 'aliases' => [
 	// ...
-	'PDF' => Meneses\LaravelPdf\Facades\Pdf::class
+	'PDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class
 ]
 ```
 
 ## Basic Usage
 
-To use Laravel PDF add something like this to one of your controllers. You can pass data to a view in `/resources/views`.
+To use Laravel Mpdf add something like this to one of your controllers. You can pass data to a view in `/resources/views`.
 
 ```php
+//....
 use PDF;
-
-function generate_pdf() {
-	$data = [
-		'foo' => 'bar'
-	];
-	$pdf = PDF::loadView('pdf.document', $data);
-	return $pdf->stream('document.pdf');
+class ReportController extends Controller {
+	function generate_pdf() {
+		$data = [
+			'foo' => 'bar'
+		];
+		$pdf = PDF::loadView('pdf.document', $data);
+		return $pdf->stream('document.pdf');
+	}
 }
 ```
 
@@ -106,7 +116,7 @@ Inside of headers and footers `{PAGENO}` can be used to display the page number.
 
 ## Included Fonts
 
-By default you can use all the fonts [shipped with mPDF](https://mpdf.github.io/fonts-languages/available-fonts-v6.html).
+By default you can use all the fonts [shipped with Mpdf](https://mpdf.github.io/fonts-languages/available-fonts-v6.html).
 
 ## Custom Fonts
 
