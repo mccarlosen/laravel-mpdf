@@ -19,7 +19,7 @@ class LaravelMpdfServiceProvider extends BaseServiceProvider {
 		);
 
 		$this->app->bind('mpdf.wrapper', function($app) {
-			return new LaravelMdfWrapper();
+			return new LaravelMpdfWrapper();
 		});
 	}
 
