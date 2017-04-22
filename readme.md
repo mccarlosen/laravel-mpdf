@@ -3,6 +3,9 @@
 
 > Easily generate PDF documents from HTML right inside of Laravel using this mpdf wrapper.
 
+## Important Note
+
+> Currently supported mpdf version `6.1.3`
 
 ## Installation
 
