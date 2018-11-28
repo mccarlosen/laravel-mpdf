@@ -5,7 +5,8 @@
 
 ## Important Note
 
-> Currently supported mpdf version `6.1.3`
+> Php version >= 7.0
+> Currently supported mpdf version `7.1`
 
 ## Installation
 
@@ -13,7 +14,7 @@ Require this package in your `composer.json`
 
 ```
 "require": {
-	carlos-meneses/laravel-mpdf: "^1.0"
+	carlos-meneses/laravel-mpdf: "2.1"
 }
 ```
 

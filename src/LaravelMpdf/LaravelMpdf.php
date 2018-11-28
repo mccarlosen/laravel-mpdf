@@ -20,26 +20,30 @@ class LaravelMpdf {
 	{
 		$this->config = $config;
 
-		if (Config::has('pdf.custom_font_path') && Config::has('pdf.custom_font_data')) {
-			define('_MPDF_SYSTEM_TTFONTS_CONFIG', __DIR__ . '/../mpdf_ttfonts_config.php');
-		}
+		$defaultConfig = (new \Mpdf\Config\ConfigVariables())->getDefaults();
+		$fontDirs = $defaultConfig['fontDir'];
 
+		$defaultFontConfig = (new \Mpdf\Config\FontVariables())->getDefaults();
+		$fontData = $defaultFontConfig['fontdata'];
+		
 		$this->mpdf = new Mpdf([
 			'mode' => $this->getConfig('mode'),
 			'format' => $this->getConfig('format'),
-			'orientation' => $this->getConfig('orientation')
+			'orientation' => $this->getConfig('orientation'),
+			'default_font_size' => $this->getConfig('default_font_size'),
+			'default_font' => $this->getConfig('default_font'),
+			'margin_left' => $this->getConfig('margin_left'),
+			'margin_right' => $this->getConfig('margin_right'),
+			'margin_top' => $this->getConfig('margin_top'),
+			'margin_bottom' => $this->getConfig('margin_bottom'),
+			'margin_header' => $this->getConfig('margin_header'),
+			'margin_footer' => $this->getConfig('margin_footer'),
+			'fontDir' => array_merge($fontDirs, [
+				$this->getConfig('custom_font_dir')
+			]),
+			'fontdata' => $fontData + $this->getConfig('custom_font_data'),
+			'default_font' => $this->getConfig('default_font')
 		]);
-	/*   // mode - default ''
-	// format - A4, for example, default ''
-$this->getConfig('default_font_size'), // font size - default 0
-$this->getConfig('default_font'),      // default font family
-$this->getConfig('margin_left'),       // margin_left
-$this->getConfig('margin_right'),      // margin right
-$this->getConfig('margin_top'),        // margin top
-$this->getConfig('margin_bottom'),     // margin bottom
-$this->getConfig('margin_header'),     // margin header
-$this->getConfig('margin_footer'),     // margin footer
-// L - landscape, P - portrait */
 
 		$this->mpdf->SetTitle         ( $this->getConfig('title') );
 		$this->mpdf->SetAuthor        ( $this->getConfig('author') );
