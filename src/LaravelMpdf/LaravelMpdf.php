@@ -3,7 +3,7 @@
 namespace Meneses\LaravelMpdf;
 
 use Config;
-use mPDF;
+use Mpdf;
 
 /**
  * Laravel Mpdf: mPDF wrapper for Laravel 5
@@ -24,19 +24,22 @@ class LaravelMpdf {
 			define('_MPDF_SYSTEM_TTFONTS_CONFIG', __DIR__ . '/../mpdf_ttfonts_config.php');
 		}
 
-		$this->mpdf = new mPDF(
-			$this->getConfig('mode'),              // mode - default ''
-			$this->getConfig('format'),            // format - A4, for example, default ''
-			$this->getConfig('default_font_size'), // font size - default 0
-			$this->getConfig('default_font'),      // default font family
-			$this->getConfig('margin_left'),       // margin_left
-			$this->getConfig('margin_right'),      // margin right
-			$this->getConfig('margin_top'),        // margin top
-			$this->getConfig('margin_bottom'),     // margin bottom
-			$this->getConfig('margin_header'),     // margin header
-			$this->getConfig('margin_footer'),     // margin footer
-			$this->getConfig('orientation')        // L - landscape, P - portrait
-		);
+		$this->mpdf = new Mpdf([
+			'mode' => $this->getConfig('mode'),
+			'format' => $this->getConfig('format'),
+			'orientation' => $this->getConfig('orientation')
+		]);
+	/*   // mode - default ''
+	// format - A4, for example, default ''
+$this->getConfig('default_font_size'), // font size - default 0
+$this->getConfig('default_font'),      // default font family
+$this->getConfig('margin_left'),       // margin_left
+$this->getConfig('margin_right'),      // margin right
+$this->getConfig('margin_top'),        // margin top
+$this->getConfig('margin_bottom'),     // margin bottom
+$this->getConfig('margin_header'),     // margin header
+$this->getConfig('margin_footer'),     // margin footer
+// L - landscape, P - portrait */
 
 		$this->mpdf->SetTitle         ( $this->getConfig('title') );
 		$this->mpdf->SetAuthor        ( $this->getConfig('author') );
