@@ -5,7 +5,7 @@
 
 ## Important Note
 
-> Currently supported mpdf version `6.1.3`
+> Currently supported mpdf version `7.1` and PHP version >= 7.0
 
 ## Installation
 
@@ -13,7 +13,7 @@ Require this package in your `composer.json`
 
 ```
 "require": {
-	carlos-meneses/laravel-mpdf: "^1.0"
+	carlos-meneses/laravel-mpdf: "2.1.1"
 }
 ```
 
@@ -125,11 +125,11 @@ By default you can use all the fonts [shipped with Mpdf](https://mpdf.github.io/
 
 ## Custom Fonts
 
-You can use your own fonts in the generated PDFs. The TTF files have to be located in one folder, e.g. `/resources/fonts/`. Add this to your configuration file (`/config/pdf.php`):
+You can use your own fonts in the generated PDFs. The TTF files have to be located in one folder, e.g. `resources/fonts/`. Add this to your configuration file (`/config/pdf.php`):
 
 ```php
 return [
-	'custom_font_path' => base_path('/resources/fonts/'), // don't forget the trailing slash!
+	'custom_font_path' => base_path('resources/fonts/'), // don't forget the trailing slash!
 	'custom_font_data' => [
 		'examplefont' => [
 			'R'  => 'ExampleFont-Regular.ttf',    // regular font
