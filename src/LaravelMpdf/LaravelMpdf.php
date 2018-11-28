@@ -3,7 +3,7 @@
 namespace Meneses\LaravelMpdf;
 
 use Config;
-use Mpdf;
+use Mpdf\Mpdf;
 
 /**
  * Laravel Mpdf: mPDF wrapper for Laravel 5
