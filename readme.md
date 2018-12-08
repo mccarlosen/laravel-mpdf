@@ -83,13 +83,13 @@ return [
 	'display_mode'         => 'fullpage',
 	'watermark_text_alpha' => 0.1,
 	'custom_font_dir'      => '',
-	'custom_font_data' 	   => [],
+	'custom_font_data'     => [],
 ];
 ```
 
 To override this configuration on a per-file basis use the fourth parameter of the initializing call like this:
 
-```
+```php
 PDF::loadView('pdf', $data, [], [
   'title' => 'Another Title',
   'margin_top' => 0
