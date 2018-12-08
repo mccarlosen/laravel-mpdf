@@ -18,5 +18,7 @@ return [
 	'show_watermark'        => false,
 	'watermark_font'        => 'sans-serif',
 	'display_mode'          => 'fullpage',
-	'watermark_text_alpha'  => 0.1
+	'watermark_text_alpha'  => 0.1,
+	'custom_font_dir'       => '',
+	'custom_font_data'		=> [],
 ];
