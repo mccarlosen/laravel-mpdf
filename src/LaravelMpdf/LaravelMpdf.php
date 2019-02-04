@@ -2,7 +2,7 @@
 
 namespace Meneses\LaravelMpdf;
 
-use Config;
+use Illuminate\Support\Facades\Config;
 use Mpdf\Mpdf;
 
 /**
@@ -41,7 +41,7 @@ class LaravelMpdf {
 			'fontDir' => array_merge($fontDirs, [
 				$this->getConfig('custom_font_dir')
 			]),
-			'fontdata' => $fontData + $this->getConfig('custom_font_data'),
+			'fontdata' => ($this->getConfig('custom_font_data')?$this->getConfig('custom_font_data'):$fontData),
 			'default_font' => $this->getConfig('default_font')
 		]);
 
