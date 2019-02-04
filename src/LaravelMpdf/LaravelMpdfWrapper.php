@@ -2,8 +2,8 @@
 
 namespace Meneses\LaravelMpdf;
 
-use File;
-use View;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\View;
 
 class LaravelMpdfWrapper {
 
