@@ -84,6 +84,7 @@ return [
 	'watermark_text_alpha' => 0.1,
 	'custom_font_dir'      => '',
 	'custom_font_data' 	   => [],
+	'auto_language_detection'  => false
 ];
 ```
 
