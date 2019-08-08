@@ -13,7 +13,7 @@ Require this package in your `composer.json`
 
 ```
 "require": {
-	carlos-meneses/laravel-mpdf: "2.1.2"
+	carlos-meneses/laravel-mpdf: "2.1.3"
 }
 ```
 
@@ -84,7 +84,8 @@ return [
 	'watermark_text_alpha' => 0.1,
 	'custom_font_dir'      => '',
 	'custom_font_data' 	   => [],
-	'auto_language_detection'  => false
+	'auto_language_detection'  => false,
+	'temDir'               => '',
 ];
 ```
 
