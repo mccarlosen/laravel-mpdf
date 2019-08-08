@@ -85,7 +85,7 @@ return [
 	'custom_font_dir'      => '',
 	'custom_font_data' 	   => [],
 	'auto_language_detection'  => false,
-	'temDir'               => '',
+	'tempDir'               => '',
 ];
 ```
 
