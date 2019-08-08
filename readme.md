@@ -90,7 +90,7 @@ return [
 
 To override this configuration on a per-file basis use the fourth parameter of the initializing call like this:
 
-```
+```php
 PDF::loadView('pdf', $data, [], [
   'title' => 'Another Title',
   'margin_top' => 0
