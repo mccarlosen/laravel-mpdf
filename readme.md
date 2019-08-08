@@ -5,7 +5,7 @@
 
 ## Important Note
 
-> Currently supported mpdf version `7.1` and PHP version >= 7.0
+> Currently supported mpdf version `8.0` with FPDF version 2 and PHP version >= 7.0
 
 ## Installation
 
