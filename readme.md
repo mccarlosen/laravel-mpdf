@@ -86,6 +86,8 @@ return [
 	'custom_font_data' 	   => [],
 	'auto_language_detection'  => false,
 	'temp_dir'               => '',
+	'pdfa' 			=> false,
+        'pdfaauto' 		=> false,
 ];
 ```
 
