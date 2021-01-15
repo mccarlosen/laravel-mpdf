@@ -39,6 +39,8 @@ To start using Laravel, add the Service Provider and the Facade to your `config/
 ]
 ```
 
+> Note: This package supports auto-discovery features of Laravel 5.5+, You only need to manually add the service provider and alias if working on Laravel version lower then 5.5
+
 ## Basic Usage
 
 To use Laravel Mpdf add something like this to one of your controllers. You can pass data to a view in `/resources/views`.
