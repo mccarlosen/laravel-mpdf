@@ -42,7 +42,7 @@ class LaravelMpdf {
 			'fontDir' => array_merge($fontDirs, [
 				$this->getConfig('custom_font_dir')
 			]),
-			'fontdata' => ($this->getConfig('custom_font_data')) ?: $fontData,
+			'fontdata' => array_merge($fontData, $this->getConfig('custom_font_data')),
 			'default_font' => $this->getConfig('default_font'), 
 			'autoScriptToLang' => $this->getConfig('auto_language_detection'), 
 			'autoLangToFont' => $this->getConfig('auto_language_detection'),
