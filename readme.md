@@ -181,7 +181,8 @@ class ReportController extends Controller {
 	public function generate_pdf() 
 	{
 		$data = [
-			'foo' => 'bar'
+			'foo' => 'hello 1',
+            'bar' => 'hello 2'
 		];
 		$pdf = PDF::chunkLoadView('<html-separator/>', 'pdf.document', $data);
 		return $pdf->stream('document.pdf');
@@ -192,11 +193,11 @@ class ReportController extends Controller {
 <div>
     <h1>Hello World</h1>
     <table>
-        <tr><td></td></tr>
+        <tr><td>{{ $foo }}</td></tr>
     </table>
     <html-separator/>
     <table>
-        <tr><td></td></tr>
+        <tr><td>{{ $bar }}</td></tr>
     </table>
     <html-separator/>
 </div>
