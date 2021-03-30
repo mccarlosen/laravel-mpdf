@@ -170,6 +170,39 @@ $pdf->getMpdf()->AddPage(...);
 
 ```
 
+## Chunk HTML
+
+For big HTML you might get `Uncaught Mpdf\MpdfException: The HTML code size is larger than pcre.backtrack_limit xxx` error, or you might just get [empty or blank result](https://mpdf.github.io/troubleshooting/known-issues.html#blank-pages-or-some-sections-missing). In these situations you can use chunk methods while you added a separator to your HTML:
+
+```php
+//....
+use PDF;
+class ReportController extends Controller {
+	public function generate_pdf() 
+	{
+		$data = [
+			'foo' => 'bar'
+		];
+		$pdf = PDF::chunkLoadView('<html-separator/>', 'pdf.document', $data);
+		return $pdf->stream('document.pdf');
+	}
+}
+```
+```html
+<div>
+    <h1>Hello World</h1>
+    <table>
+        <tr><td></td></tr>
+    </table>
+    <html-separator/>
+    <table>
+        <tr><td></td></tr>
+    </table>
+    <html-separator/>
+</div>
+```
+
+
 ## License
 
 Laravel Mpdf is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

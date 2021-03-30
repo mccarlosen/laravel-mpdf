@@ -16,7 +16,7 @@ class LaravelMpdf {
 	protected $mpdf;
 	protected $config = [];
 
-	public function __construct($html = '', $config = [])
+	public function __construct($config = [])
 	{
 		$this->config = $config;
 
