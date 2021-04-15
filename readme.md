@@ -1,15 +1,18 @@
-	
+
 # Laravel Mpdf: Using Mpdf in Laravel for generate Pdfs
 
 > Easily generate PDF documents from HTML right inside of Laravel using this mpdf wrapper.
 
-## Important Note
+## Important Notes
 
 > Currently supported mpdf version `8.0` with FPDF version 2 and PHP version >= 7.0
 
+> mPDF will timeout on [fetching external HTTP resources](https://github.com/mpdf/mpdf#known-server-caveats) when using single-threaded servers
+> such as `php -S` or `artisan serve`. Use a proper webserver for full functionality.
+
 ## Installation
 
-Require this package in your `composer.json` 
+Require this package in your `composer.json`
 
 ```
 "require": {
@@ -49,7 +52,7 @@ To use Laravel Mpdf add something like this to one of your controllers. You can 
 //....
 use PDF;
 class ReportController extends Controller {
-	public function generate_pdf() 
+	public function generate_pdf()
 	{
 		$data = [
 			'foo' => 'bar'
@@ -178,7 +181,7 @@ For big HTML you might get `Uncaught Mpdf\MpdfException: The HTML code size is l
 //....
 use PDF;
 class ReportController extends Controller {
-	public function generate_pdf() 
+	public function generate_pdf()
 	{
 		$data = [
 			'foo' => 'hello 1',
