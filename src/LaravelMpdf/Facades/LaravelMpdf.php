@@ -1,13 +1,13 @@
 <?php
 
-namespace Meneses\LaravelMpdf\Facades;
+namespace Abumosaab\LaravelMpdf\Facades;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
-use Meneses\LaravelMpdf\LaravelMpdf as Pdf;
+use Abumosaab\LaravelMpdf\LaravelMpdf as Pdf;
 
 /**
  * Class LaravelMpdf
- * @package Meneses\LaravelMpdf\Facades
+ * @package Abumosaab\LaravelMpdf\Facades
  *
  * @method Pdf loadHTML(string $html, ?array $config = [])
  * @method Pdf loadFile(string $file, ?array $config = [])
