@@ -8,15 +8,15 @@
         "mpdf/mpdf": "^8.0"
     },
     "autoload": {
-        "psr-4": {"Meneses\\LaravelMpdf\\": "src/LaravelMpdf"}
+        "psr-4": {"Abumosaab\\LaravelMpdf\\": "src/LaravelMpdf"}
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Meneses\\LaravelMpdf\\LaravelMpdfServiceProvider"
+                "Abumosaab\\LaravelMpdf\\LaravelMpdfServiceProvider"
             ],
             "aliases": {
-                "PDF": "Meneses\\LaravelMpdf\\Facades\\LaravelMpdf"
+                "PDF": "Abumosaab\\LaravelMpdf\\Facades\\LaravelMpdf"
             }
         }
     }
