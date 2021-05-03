@@ -1,11 +1,11 @@
 {
-    "name": "carlos-meneses/laravel-mpdf",
-    "description": "Laravel Mpdf: Using Mpdf in Laravel 5 for generate Pdfs.",
+    "name": "Meneses/laravel-mpdf",
+    "description": "Laravel Mpdf: Using Mpdf in Laravel to generate Pdfs.",
     "keywords": ["mpdf", "pdf", "laravel"],
     "license": "MIT",
     "require": {
-        "php": ">=7.0.0",
-        "mpdf/mpdf": "^8.0"
+        "php": "^8.0",
+        "mpdf/mpdf": "^8.0.10"
     },
     "autoload": {
         "psr-4": {
