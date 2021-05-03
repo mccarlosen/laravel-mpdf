@@ -54,8 +54,8 @@ class LaravelMpdf {
 		$this->mpdf->SetWatermarkText ( $this->getConfig('watermark') );
 		$this->mpdf->SetDisplayMode   ( $this->getConfig('display_mode') );
 		
-            $this->mpdf->PDFA = $this->getConfig('pdfa') ?? false;
-            $this->mpdf->PDFAauto = $this->getConfig('pdfaauto') ?? false;
+		$this->mpdf->PDFA = $this->getConfig('pdfa') ?? false;
+		$this->mpdf->PDFAauto = $this->getConfig('pdfaauto') ?? false;
 
 		$this->mpdf->showWatermarkText  = $this->getConfig('show_watermark');
 		$this->mpdf->watermark_font     = $this->getConfig('watermark_font');
