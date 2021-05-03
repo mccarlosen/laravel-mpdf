@@ -3,9 +3,9 @@
 namespace Meneses\LaravelMpdf;
 
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class LaravelMpdfServiceProvider extends BaseServiceProvider {
+class LaravelMpdfServiceProvider extends ServiceProvider {
 
 	/**
 	 * Register the service provider.
