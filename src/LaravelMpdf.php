@@ -1,12 +1,12 @@
 <?php
 
-namespace Abumosaab\LaravelMpdf;
+namespace Meneses\LaravelMpdf;
 
 use Illuminate\Support\Facades\Config;
 use Mpdf\Mpdf;
 
 /**
- * Laravel Mpdf: mPDF wrapper for Laravel 5
+ * Laravel Mpdf: mPDF wrapper for Laravel
  *
  * @package laravel-mpdf
  * @author Carlos Meneses
