@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Me\\LaravelMpdf\\": "src/"
+            "Meneses\\LaravelMpdf\\": "src/"
         }
     },
     "extra": {
