@@ -8,7 +8,9 @@
         "mpdf/mpdf": "^8.0"
     },
     "autoload": {
-        "psr-4": {"Meneses\\LaravelMpdf\\": "src/LaravelMpdf"}
+        "psr-4": {
+            "Meneses\\LaravelMpdf\\": "src/"
+        }
     },
     "extra": {
         "laravel": {
