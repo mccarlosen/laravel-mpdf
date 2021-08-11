@@ -60,6 +60,11 @@ class LaravelMpdf {
 		$this->mpdf->showWatermarkText  = $this->getConfig('show_watermark');
 		$this->mpdf->watermark_font     = $this->getConfig('watermark_font');
 		$this->mpdf->watermarkTextAlpha = $this->getConfig('watermark_text_alpha');
+		
+		$this->mpdf->showWatermarkText  = $this->getConfig('show_watermark');
+		$this->mpdf->watermark_font     = $this->getConfig('watermark_font');
+		$this->mpdf->watermarkTextAlpha = $this->getConfig('watermark_text_alpha');
+		$this->mpdf->showWatermarkImage = $this->getConfig('show_watermark_image');
 	}
 
 	protected function getConfig($key) {

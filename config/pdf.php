@@ -25,4 +25,9 @@ return [
     'temp_dir'                => rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR),
     'pdfa'                    => false,
     'pdfaauto'                => false,
+	'show_watermark_image'  	=> false,
+	'watermark_image_file'   	=> '',
+	'watermark_image_alpha'   	=> 'D',
+	'watermark_image_size'   	=> 'D',
+	'watermark_image_position'  => 'P',
 ];
