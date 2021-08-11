@@ -210,3 +210,19 @@ class ReportController extends Controller {
 ## License
 
 Laravel Mpdf is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+#watermark_image support 
+```create variable container for image 
+
+ex. $img = {image directory} or $img = {base64rawimage}
+
+include this lines in loadView
+
+	'watermark_image_file' => $img,
+	'watermark_image_alpha' => .{opacity},
+	'watermark_image_size' => {size},
+	'watermark_image_position' => array({x},{y}),
+	'show_watermark_image' => true,
+
+```
