@@ -25,4 +25,5 @@ return [
     'temp_dir'                => rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR),
     'pdfa'                    => false,
     'pdfaauto'                => false,
+    'use_active_forms'        => false,
 ];
