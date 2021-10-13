@@ -90,6 +90,7 @@ class LaravelMpdf
      * Output the PDF as a string.
      *
      * @return string The rendered PDF as string
+     * @throws \Mpdf\MpdfException
      */
     public function output()
     {
@@ -101,6 +102,7 @@ class LaravelMpdf
      *
      * @param $filename
      * @return static
+     * @throws \Mpdf\MpdfException
      */
     public function save($filename)
     {
@@ -112,6 +114,7 @@ class LaravelMpdf
      *
      * @param string $filename
      * @return \Symfony\Component\HttpFoundation\Response
+     * @throws \Mpdf\MpdfException
      */
     public function download($filename = 'document.pdf')
     {
@@ -123,6 +126,7 @@ class LaravelMpdf
      *
      * @param string $filename
      * @return \Symfony\Component\HttpFoundation\Response
+     * @throws \Mpdf\MpdfException
      */
     public function stream($filename = 'document.pdf')
     {

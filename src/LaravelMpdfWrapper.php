@@ -22,6 +22,7 @@ class LaravelMpdfWrapper
      *
      * @param string $html
      * @return Pdf
+     * @throws \Mpdf\MpdfException
      */
     public function loadHTML($html, $config = [])
     {
@@ -37,6 +38,7 @@ class LaravelMpdfWrapper
      * @param string $separator
      * @param string $html
      * @return Pdf
+     * @throws \Mpdf\MpdfException
      */
     public function chunkLoadHTML($separator, $html, $config = [])
     {
@@ -55,6 +57,7 @@ class LaravelMpdfWrapper
      *
      * @param string $file
      * @return Pdf
+     * @throws \Mpdf\MpdfException
      */
     public function loadFile($file, $config = [])
     {
@@ -80,6 +83,7 @@ class LaravelMpdfWrapper
      * @param array $data
      * @param array $mergeData
      * @return Pdf
+     * @throws \Mpdf\MpdfException
      */
     public function loadView($view, $data = [], $mergeData = [], $config = [])
     {
@@ -94,6 +98,7 @@ class LaravelMpdfWrapper
      * @param array $data
      * @param array $mergeData
      * @return Pdf
+     * @throws \Mpdf\MpdfException
      */
     public function chunkLoadView($separator, $view, $data = [], $mergeData = [], $config = [])
     {
