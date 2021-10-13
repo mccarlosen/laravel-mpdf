@@ -4,6 +4,7 @@ namespace Meneses\LaravelMpdf;
 
 use Illuminate\Support\Facades\Config;
 use Mpdf\Mpdf;
+use Mpdf\Output\Destination;
 
 /**
  * Laravel Mpdf: mPDF wrapper for Laravel
@@ -92,7 +93,7 @@ class LaravelMpdf
      */
     public function output()
     {
-        return $this->mpdf->Output('', 'S');
+        return $this->mpdf->Output('', Destination::STRING_RETURN);
     }
 
     /**
@@ -103,7 +104,7 @@ class LaravelMpdf
      */
     public function save($filename)
     {
-        return $this->mpdf->Output($filename, 'F');
+        return $this->mpdf->Output($filename, Destination::FILE);
     }
 
     /**
@@ -114,7 +115,7 @@ class LaravelMpdf
      */
     public function download($filename = 'document.pdf')
     {
-        return $this->mpdf->Output($filename, 'D');
+        return $this->mpdf->Output($filename, Destination::DOWNLOAD);
     }
 
     /**
@@ -125,6 +126,6 @@ class LaravelMpdf
      */
     public function stream($filename = 'document.pdf')
     {
-        return $this->mpdf->Output($filename, 'I');
+        return $this->mpdf->Output($filename, Destination::INLINE);
     }
 }
