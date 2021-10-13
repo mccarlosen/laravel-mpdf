@@ -48,17 +48,23 @@ class LaravelMpdf {
 			'tempDir' => ($this->getConfig('temp_dir')) ?: $tempDir,
 		]);
 
-		$this->mpdf->SetTitle         ( $this->getConfig('title') );
-		$this->mpdf->SetAuthor        ( $this->getConfig('author') );
-		$this->mpdf->SetWatermarkText ( $this->getConfig('watermark') );
-		$this->mpdf->SetDisplayMode   ( $this->getConfig('display_mode') );
-		
-		$this->mpdf->PDFA = $this->getConfig('pdfa') ?? false;
-		$this->mpdf->PDFAauto = $this->getConfig('pdfaauto') ?? false;
+        $this->mpdf->SetTitle($this->getConfig('title'));
+        $this->mpdf->SetAuthor($this->getConfig('author'));
+        $this->mpdf->SetWatermarkText($this->getConfig('watermark'));
+        $this->mpdf->SetWatermarkImage(
+            $this->getConfig('watermark_image_path'),
+            $this->getConfig('watermark_image_alpha'),
+            $this->getConfig('watermark_image_size'),
+            $this->getConfig('watermark_image_position')
+        );
+        $this->mpdf->SetDisplayMode($this->getConfig('display_mode'));
 
-		$this->mpdf->showWatermarkText  = $this->getConfig('show_watermark');
-		$this->mpdf->watermark_font     = $this->getConfig('watermark_font');
-		$this->mpdf->watermarkTextAlpha = $this->getConfig('watermark_text_alpha');
+        $this->mpdf->PDFA               = $this->getConfig('pdfa') ?? false;
+        $this->mpdf->PDFAauto           = $this->getConfig('pdfaauto') ?? false;
+        $this->mpdf->showWatermarkText  = $this->getConfig('show_watermark');
+        $this->mpdf->showWatermarkImage = $this->getConfig('show_watermark_image');
+        $this->mpdf->watermark_font     = $this->getConfig('watermark_font');
+        $this->mpdf->watermarkTextAlpha = $this->getConfig('watermark_text_alpha');
 		// use active forms
 		$this->mpdf->useActiveForms = $this->getConfig('use_active_forms');
 	}
