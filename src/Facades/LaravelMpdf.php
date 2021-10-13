@@ -16,14 +16,16 @@ use Meneses\LaravelMpdf\LaravelMpdf as Pdf;
  * @method Pdf chunkLoadFile(string $separator, string $file, ?array $config = [])
  * @method Pdf chunkLoadView(string $separator, string $view, ?array $data = [], ?array $mergeData = [], ?array $config = [])
  */
-class LaravelMpdf extends BaseFacade {
+class LaravelMpdf extends BaseFacade
+{
 
-	/**
-	 * Get the registered name of the component.
-	 *
-	 * @return string
-	 */
-	protected static function getFacadeAccessor() { 
-		return 'mpdf.wrapper'; 
-	}
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'mpdf.wrapper';
+    }
 }
