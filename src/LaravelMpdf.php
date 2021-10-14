@@ -51,6 +51,7 @@ class LaravelMpdf
         ]);
 
         $this->mpdf->SetTitle($this->getConfig('title'));
+        $this->mpdf->SetSubject($this->getConfig('subject'));
         $this->mpdf->SetAuthor($this->getConfig('author'));
         $this->mpdf->SetWatermarkText($this->getConfig('watermark'));
         $this->mpdf->SetWatermarkImage(
