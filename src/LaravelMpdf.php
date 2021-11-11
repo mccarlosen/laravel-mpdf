@@ -25,11 +25,12 @@ class LaravelMpdf
         $defaultConfig = (new \Mpdf\Config\ConfigVariables())->getDefaults();
         $fontDirs      = $defaultConfig['fontDir'];
         $tempDir       = $defaultConfig['tempDir'];
+        $configMerge = array_merge($defaultConfig, $this->config);
 
         $defaultFontConfig = (new \Mpdf\Config\FontVariables())->getDefaults();
         $fontData          = $defaultFontConfig['fontdata'];
-
-        $this->mpdf = new Mpdf([
+        
+        $this->mpdf = new Mpdf(array_merge([
             'mode'              => $this->getConfig('mode'),
             'format'            => $this->getConfig('format'),
             'orientation'       => $this->getConfig('orientation'),
@@ -48,7 +49,7 @@ class LaravelMpdf
             'autoScriptToLang'  => $this->getConfig('auto_language_detection'),
             'autoLangToFont'    => $this->getConfig('auto_language_detection'),
             'tempDir'           => ($this->getConfig('temp_dir')) ?: $tempDir,
-        ]);
+        ], $configMerge));
 
         $this->mpdf->SetTitle($this->getConfig('title'));
         $this->mpdf->SetSubject($this->getConfig('subject'));
