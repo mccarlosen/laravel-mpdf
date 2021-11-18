@@ -16,7 +16,7 @@ Require this package in your `composer.json`
 
 ```
 "require": {
-	carlos-meneses/laravel-mpdf: "2.1.6"
+  carlos-meneses/laravel-mpdf: "2.1.6"
 }
 ```
 
@@ -30,15 +30,15 @@ To start using Laravel, add the Service Provider and the Facade to your `config/
 
 ```php
 'providers' => [
-	// ...
-	Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class
+  // ...
+  Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class
 ]
 ```
 
 ```php
 'aliases' => [
-	// ...
-	'PDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class
+  // ...
+  'PDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class
 ]
 ```
 
@@ -52,14 +52,14 @@ To use Laravel Mpdf add something like this to one of your controllers. You can 
 //....
 use PDF;
 class ReportController extends Controller {
-	public function generate_pdf()
-	{
-		$data = [
-			'foo' => 'bar'
-		];
-		$pdf = PDF::loadView('pdf.document', $data);
-		return $pdf->stream('document.pdf');
-	}
+  public function generate_pdf()
+  {
+    $data = [
+      'foo' => 'bar'
+    ];
+    $pdf = PDF::loadView('pdf.document', $data);
+    return $pdf->stream('document.pdf');
+  }
 }
 ```
 
@@ -69,36 +69,36 @@ You can use a custom file to overwrite the default configuration. Just create `c
 
 ```php
 return [
-	'mode'                       => '',
-	'format'                     => 'A4',
-	'default_font_size'          => '12',
-	'default_font'               => 'sans-serif',
-	'margin_left'                => 10,
-	'margin_right'               => 10,
-	'margin_top'                 => 10,
-	'margin_bottom'              => 10,
-	'margin_header'              => 0,
-	'margin_footer'              => 0,
-	'orientation'                => 'P',
-	'title'                      => 'Laravel mPDF',
-	'author'                     => '',
-	'watermark'                  => '',
-	'show_watermark'             => false,
-	'show_watermark_image'       => false,
-	'watermark_font'             => 'sans-serif',
-	'display_mode'               => 'fullpage',
-	'watermark_text_alpha'       => 0.1,
-	'watermark_image_path'       => '',
+  'mode'                       => '',
+  'format'                     => 'A4',
+  'default_font_size'          => '12',
+  'default_font'               => 'sans-serif',
+  'margin_left'                => 10,
+  'margin_right'               => 10,
+  'margin_top'                 => 10,
+  'margin_bottom'              => 10,
+  'margin_header'              => 0,
+  'margin_footer'              => 0,
+  'orientation'                => 'P',
+  'title'                      => 'Laravel mPDF',
+  'author'                     => '',
+  'watermark'                  => '',
+  'show_watermark'             => false,
+  'show_watermark_image'       => false,
+  'watermark_font'             => 'sans-serif',
+  'display_mode'               => 'fullpage',
+  'watermark_text_alpha'       => 0.1,
+  'watermark_image_path'       => '',
   'watermark_image_alpha'      => 0.2,
   'watermark_image_size'       => 'D',
   'watermark_image_position'   => 'P',
-	'custom_font_dir'            => '',
-	'custom_font_data'           => [],
-	'auto_language_detection'    => false,
-	'temp_dir'                   => rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR),
-	'pdfa'                       => false,
-	'pdfaauto'                   => false,
-	'use_active_forms'           => false,
+  'custom_font_dir'            => '',
+  'custom_font_data'           => [],
+  'auto_language_detection'    => false,
+  'temp_dir'                   => rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR),
+  'pdfa'                       => false,
+  'pdfaauto'                   => false,
+  'use_active_forms'           => false,
 ];
 ```
 
@@ -117,11 +117,11 @@ If you want to have headers and footers that appear on every page, add them to y
 
 ```html
 <htmlpageheader name="page-header">
-	Your Header Content
+  Your Header Content
 </htmlpageheader>
 
 <htmlpagefooter name="page-footer">
-	Your Footer Content
+  Your Footer Content
 </htmlpagefooter>
 ```
 
@@ -129,8 +129,8 @@ Now you just need to define them with the name attribute in your CSS:
 
 ```css
 @page {
-	header: page-header;
-	footer: page-footer;
+  header: page-header;
+  footer: page-footer;
 }
 ```
 
@@ -146,16 +146,16 @@ You can use your own fonts in the generated PDFs. The TTF files have to be locat
 
 ```php
 return [
-	'custom_font_dir'  => base_path('resources/fonts/'), // don't forget the trailing slash!
-	'custom_font_data' => [
-		'examplefont' => [
-			'R'  => 'ExampleFont-Regular.ttf',    // regular font
-			'B'  => 'ExampleFont-Bold.ttf',       // optional: bold font
-			'I'  => 'ExampleFont-Italic.ttf',     // optional: italic font
-			'BI' => 'ExampleFont-Bold-Italic.ttf' // optional: bold-italic font
-		]
-		// ...add as many as you want.
-	]
+  'custom_font_dir'  => base_path('resources/fonts/'), // don't forget the trailing slash!
+  'custom_font_data' => [
+    'examplefont' => [
+      'R'  => 'ExampleFont-Regular.ttf',    // regular font
+      'B'  => 'ExampleFont-Bold.ttf',       // optional: bold font
+      'I'  => 'ExampleFont-Italic.ttf',     // optional: italic font
+      'BI' => 'ExampleFont-Bold-Italic.ttf' // optional: bold-italic font
+    ]
+  	// ...add as many as you want.
+  ]
 ];
 ```
 
@@ -163,7 +163,7 @@ Now you can use the font in CSS:
 
 ```css
 body {
-	font-family: 'examplefont', sans-serif;
+  font-family: 'examplefont', sans-serif;
 }
 ```
 
@@ -176,7 +176,6 @@ use PDF;
 
 $pdf = PDF::loadView('pdf.document', $data);
 $pdf->getMpdf()->AddPage(...);
-
 ```
 
 ## Chunk HTML
@@ -187,28 +186,28 @@ For big HTML you might get `Uncaught Mpdf\MpdfException: The HTML code size is l
 //....
 use PDF;
 class ReportController extends Controller {
-	public function generate_pdf()
-	{
-		$data = [
-			'foo' => 'hello 1',
+  public function generate_pdf()
+  {
+    $data = [
+      'foo' => 'hello 1',
       'bar' => 'hello 2'
-		];
-		$pdf = PDF::chunkLoadView('<html-separator/>', 'pdf.document', $data);
-		return $pdf->stream('document.pdf');
-	}
+    ];
+    $pdf = PDF::chunkLoadView('<html-separator/>', 'pdf.document', $data);
+    return $pdf->stream('document.pdf');
+  }
 }
 ```
 ```html
 <div>
-    <h1>Hello World</h1>
-    <table>
-        <tr><td>{{ $foo }}</td></tr>
-    </table>
-    <html-separator/>
-    <table>
-        <tr><td>{{ $bar }}</td></tr>
-    </table>
-    <html-separator/>
+  <h1>Hello World</h1>
+  <table>
+    <tr><td>{{ $foo }}</td></tr>
+  </table>
+  <html-separator/>
+  <table>
+    <tr><td>{{ $bar }}</td></tr>
+  </table>
+  <html-separator/>
 </div>
 ```
 
