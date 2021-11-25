@@ -65,7 +65,7 @@ class ReportController extends Controller {
 
 ## Config
 
-You can use a custom file to overwrite the default configuration. Just create `config/pdf.php` and add this:
+You can use a custom file to overwrite the default configuration. Just execute `php artisan vendor:publish --tag=mpdf-config` or create `config/pdf.php` and add this:
 
 ```php
 return [
