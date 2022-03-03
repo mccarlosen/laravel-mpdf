@@ -5,7 +5,7 @@
 
 ## Important Notes
 
-> Currently supported mpdf version `8.0` with FPDF version 2 and PHP version >= 7.0. [MPDF documentation](https://mpdf.github.io/)
+> Currently supported mpdf version `8.0.17` with FPDF version 2 and PHP version >= 7.0. [MPDF documentation](https://mpdf.github.io/)
 
 > mPDF will timeout on [fetching external HTTP resources](https://github.com/mpdf/mpdf#known-server-caveats) when using single-threaded servers
 > such as `php -S` or `artisan serve`. Use a proper webserver for full functionality.
