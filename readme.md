@@ -16,7 +16,7 @@ Require this package in your `composer.json`
 
 ```
 "require": {
-  carlos-meneses/laravel-mpdf: "2.1.8"
+  carlos-meneses/laravel-mpdf: "2.1.9"
 }
 ```
 
