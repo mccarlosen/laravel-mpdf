@@ -2,9 +2,10 @@
 
 namespace Meneses\LaravelMpdf;
 
-use Illuminate\Support\Facades\Config;
 use Mpdf\Mpdf;
 use Mpdf\Output\Destination;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Traits\Macroable;
 
 /**
  * Laravel Mpdf: mPDF wrapper for Laravel
@@ -14,6 +15,7 @@ use Mpdf\Output\Destination;
  */
 class LaravelMpdf
 {
+    use Macroable;
 
     protected $mpdf;
     protected $config = [];
