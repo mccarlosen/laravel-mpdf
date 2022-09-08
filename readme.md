@@ -148,7 +148,7 @@ You can use your own fonts in the generated PDFs. The TTF files have to be locat
 return [
   'custom_font_dir'  => base_path('resources/fonts/'), // don't forget the trailing slash!
   'custom_font_data' => [
-    'examplefont' => [
+    'examplefont' => [ // must be lowercase and snake_case
       'R'  => 'ExampleFont-Regular.ttf',    // regular font
       'B'  => 'ExampleFont-Bold.ttf',       // optional: bold font
       'I'  => 'ExampleFont-Italic.ttf',     // optional: italic font
