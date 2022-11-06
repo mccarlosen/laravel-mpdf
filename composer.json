@@ -4,7 +4,7 @@
     "keywords": ["mpdf", "pdf", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^7.0 || ^8.0 || ^8.1",
         "mpdf/mpdf": "^8.0"
     },
     "autoload": {
