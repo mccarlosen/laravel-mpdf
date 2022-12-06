@@ -9,7 +9,7 @@ use Meneses\LaravelMpdf\LaravelMpdf as Pdf;
 class LaravelMpdfWrapper
 {
     /**
-     * @param array $config
+     * @param array $config optional, default []
      * @return LaravelMpdf
      */
     public function getPdf($config = [])
@@ -21,6 +21,7 @@ class LaravelMpdfWrapper
      * Load a HTML string
      *
      * @param string $html
+     * @param array $config optional, default []
      * @return Pdf
      * @throws \Mpdf\MpdfException
      */
@@ -37,6 +38,7 @@ class LaravelMpdfWrapper
      *
      * @param string $separator
      * @param string $html
+     * @param array $config optional, default []
      * @return Pdf
      * @throws \Mpdf\MpdfException
      */
@@ -56,6 +58,7 @@ class LaravelMpdfWrapper
      * Load a HTML file
      *
      * @param string $file
+     * @param array $config optional, default []
      * @return Pdf
      * @throws \Mpdf\MpdfException
      */
@@ -69,6 +72,7 @@ class LaravelMpdfWrapper
      *
      * @param string $separator
      * @param string $file
+     * @param array $config optional, default []
      * @return Pdf
      */
     public function chunkLoadFile($separator, $file, $config = [])
@@ -82,6 +86,7 @@ class LaravelMpdfWrapper
      * @param string $view
      * @param array $data
      * @param array $mergeData
+     * @param array $config optional, default []
      * @return Pdf
      * @throws \Mpdf\MpdfException
      */
@@ -97,6 +102,7 @@ class LaravelMpdfWrapper
      * @param string $view
      * @param array $data
      * @param array $mergeData
+     * @param array $config optional, default []
      * @return Pdf
      * @throws \Mpdf\MpdfException
      */
