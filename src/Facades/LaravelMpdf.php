@@ -1,13 +1,13 @@
 <?php
 
-namespace Meneses\LaravelMpdf\Facades;
+namespace Mccarlosen\LaravelMpdf\Facades;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
-use Meneses\LaravelMpdf\LaravelMpdf as Pdf;
+use Mccarlosen\LaravelMpdf\LaravelMpdf as Pdf;
 
 /**
  * Class LaravelMpdf
- * @package Meneses\LaravelMpdf\Facades
+ * @package Mccarlosen\LaravelMpdf\Facades
  *
  * @method Pdf loadHTML(string $html, ?array $config = [])
  * @method Pdf loadFile(string $file, ?array $config = [])
@@ -26,6 +26,6 @@ class LaravelMpdf extends BaseFacade
      */
     protected static function getFacadeAccessor()
     {
-        return 'mpdf.wrapper';
+        return 'laravel-mpdf';
     }
 }
