@@ -1,5 +1,5 @@
 {
-    "name": "carlos-meneses/laravel-mpdf",
+    "name": "mccarlosen/laravel-mpdf",
     "description": "Laravel Mpdf: Using Mpdf in Laravel to generate Pdfs.",
     "keywords": ["mpdf", "pdf", "laravel"],
     "license": "MIT",
@@ -9,16 +9,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Meneses\\LaravelMpdf\\": "src/"
+            "Mccarlosen\\LaravelMpdf\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Meneses\\LaravelMpdf\\LaravelMpdfServiceProvider"
+                "Mccarlosen\\LaravelMpdf\\LaravelMpdfServiceProvider"
             ],
             "aliases": {
-                "PDF": "Meneses\\LaravelMpdf\\Facades\\LaravelMpdf"
+                "PDF": "Mccarlosen\\LaravelMpdf\\Facades\\LaravelMpdf"
             }
         }
     }
