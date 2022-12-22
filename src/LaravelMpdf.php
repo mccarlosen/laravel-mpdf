@@ -66,8 +66,8 @@ class LaravelMpdf
         );
         $this->mpdf->SetDisplayMode($this->getConfig('display_mode'));
 
-        $this->mpdf->PDFA               = $this->getConfig('pdfa') ?? false;
-        $this->mpdf->PDFAauto           = $this->getConfig('pdfaauto') ?? false;
+        $this->mpdf->PDFA               = $this->getConfig('pdfa') ?: false;
+        $this->mpdf->PDFAauto           = $this->getConfig('pdfaauto') ?: false;
         $this->mpdf->showWatermarkText  = $this->getConfig('show_watermark');
         $this->mpdf->showWatermarkImage = $this->getConfig('show_watermark_image');
         $this->mpdf->watermark_font     = $this->getConfig('watermark_font');
@@ -78,7 +78,7 @@ class LaravelMpdf
 
     protected function getConfig($key)
     {
-        return $this->config[$key] ?? Config::get('pdf.' . $key);
+        return isset($this->config[$key]) ? $this->config[$key] : Config::get('pdf.' . $key);
     }
 
     /**
