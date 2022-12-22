@@ -82,6 +82,7 @@ class LaravelMpdfWrapper
      * @param string $view
      * @param array $data
      * @param array $mergeData
+     * @param array $config
      * @return Pdf
      * @throws \Mpdf\MpdfException
      */
