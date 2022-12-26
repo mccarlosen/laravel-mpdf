@@ -13,10 +13,11 @@ composer require mccarlosen/laravel-mpdf
 
 ## Important Notes:
 
-> Always check the [official MPDF documentation](https://mpdf.github.io/)
+- Always check the [official MPDF documentation](https://mpdf.github.io/)
 
-> mPDF will timeout on [fetching external HTTP resources](https://github.com/mpdf/mpdf#known-server-caveats) when using single-threaded servers
-> such as `php -S` or `artisan serve`. Use a proper webserver for full functionality.
+- mPDF will timeout on [fetching external HTTP resources](https://github.com/mpdf/mpdf#known-server-caveats) when using single-threaded servers such as `php -S` or `artisan serve`. Use a proper webserver for full functionality.
+
+<br/>
 
 To start using Laravel, add the Service Provider and the Facade to your `config/app.php`:
 
