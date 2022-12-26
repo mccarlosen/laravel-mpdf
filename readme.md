@@ -54,7 +54,7 @@ class ReportController extends Controller
         ];
 
         $pdf = PDF::loadView('pdf.document', $data);
-        
+
         return $pdf->stream('document.pdf');
     }
 
@@ -103,6 +103,8 @@ return [
 To override this configuration on a per-file basis use the fourth parameter of the initializing call like this:
 
 ```php
+// ...
+
 PDF::loadView('pdf', $data, [], [
     'title' => 'Another Title',
     'margin_top' => 0
@@ -117,7 +119,7 @@ You can access all mpdf methods through the mpdf instance with `getMpdf` method.
 use PDF;
 
 $pdf = PDF::loadView('pdf.document', $data);
-$pdf->getMpdf()->AddPage(...);
+$pdf->getMpdf()->AddPage(/*...*/);
 ```
 
 ## Headers and Footers
