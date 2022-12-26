@@ -1,6 +1,6 @@
 <?php
 
-namespace Meneses\LaravelMpdf;
+namespace Mccarlosen\LaravelMpdf;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
@@ -32,7 +32,7 @@ class LaravelMpdfServiceProvider extends ServiceProvider
             __DIR__ . '/../config/pdf.php', 'pdf'
         );
 
-        $this->app->bind('mpdf.wrapper', function ($app) {
+        $this->app->bind('laravel-mpdf', function ($app) {
             return new LaravelMpdfWrapper();
         });
     }
