@@ -11,6 +11,20 @@ Run this composer command in your laravel application:
 composer require carlos-meneses/laravel-mpdf
 ```
 
+### ⚠️ Problems with mPDF and Laravel 9: ⚠️
+
+After installing and testing `laravel-mpdf` in Laravel 9 it returns the following error:
+
+> ```Declaration of Mpdf\Mpdf::setLogger(Psr\Log\LoggerInterface $logger) must be compatible with Psr\Log\LoggerAwareInterface::setLogger(Psr\Log\LoggerInterface $logger): void```
+
+This is because Laravel 9 uses version 3 of `psr/log` by default and mPDF only supports up to 2.0. To fix it, run the following steps:
+
+- Delete the `composer.lock` file.
+- Install the latest version of mPDF. Run `composer require mpdf/mpdf`.
+- Regenerate the PDF file 👍.
+
+<br/>
+
 ## Important Notes:
 
 - Always check the [official MPDF documentation](https://mpdf.github.io/)
