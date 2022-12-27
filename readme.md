@@ -15,7 +15,9 @@ composer require carlos-meneses/laravel-mpdf
 
 After installing and testing `laravel-mpdf` in Laravel 9 it returns the following error:
 
-> ```Declaration of Mpdf\Mpdf::setLogger(Psr\Log\LoggerInterface $logger) must be compatible with Psr\Log\LoggerAwareInterface::setLogger(Psr\Log\LoggerInterface $logger): void```
+```
+Declaration of Mpdf\Mpdf::setLogger(Psr\Log\LoggerInterface $logger) must be compatible with Psr\Log\LoggerAwareInterface::setLogger(Psr\Log\LoggerInterface $logger): void
+```
 
 This is because Laravel 9 uses version 3 of `psr/log` by default and mPDF only supports up to 2.0. To fix it, run the following steps:
 
