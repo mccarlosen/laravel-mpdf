@@ -9,12 +9,12 @@ use Mccarlosen\LaravelMpdf\LaravelMpdf as Pdf;
  * Class LaravelMpdf
  * @package Mccarlosen\LaravelMpdf\Facades
  *
- * @method Pdf loadHTML(string $html, ?array $config = [])
- * @method Pdf loadFile(string $file, ?array $config = [])
- * @method Pdf loadView(string $view, ?array $data = [], ?array $mergeData = [], ?array $config = [])
- * @method Pdf chunkLoadHTML(string $separator, string $html, ?array $config = [])
- * @method Pdf chunkLoadFile(string $separator, string $file, ?array $config = [])
- * @method Pdf chunkLoadView(string $separator, string $view, ?array $data = [], ?array $mergeData = [], ?array $config = [])
+ * @method static Pdf loadHTML(string $html, ?array $config = [])
+ * @method static Pdf loadFile(string $file, ?array $config = [])
+ * @method static Pdf loadView(string $view, ?array $data = [], ?array $mergeData = [], ?array $config = [])
+ * @method static Pdf chunkLoadHTML(string $separator, string $html, ?array $config = [])
+ * @method static Pdf chunkLoadFile(string $separator, string $file, ?array $config = [])
+ * @method static Pdf chunkLoadView(string $separator, string $view, ?array $data = [], ?array $mergeData = [], ?array $config = [])
  */
 class LaravelMpdf extends BaseFacade
 {
