@@ -83,7 +83,7 @@ return [
     'author'                     => '',
     'creator'                    => '',
     'subject'                    => '',
-    'keywords'                    => '',
+    'keywords'                   => '',
     'watermark'                  => '',
     'show_watermark'             => false,
     'show_watermark_image'       => false,
