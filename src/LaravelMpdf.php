@@ -74,6 +74,9 @@ class LaravelMpdf
         $this->mpdf->watermarkTextAlpha = $this->getConfig('watermark_text_alpha');
         // use active forms
         $this->mpdf->useActiveForms = $this->getConfig('use_active_forms');
+
+        // use_dictionary_lbr
+        $this->mpdf->useDictionaryLBR = $this->getConfig('use_dictionary_lbr');
     }
 
     protected function getConfig($key)

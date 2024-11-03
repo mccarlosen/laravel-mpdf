@@ -32,4 +32,5 @@ return [
     'pdfa'                     => false,
     'pdfaauto'                 => false,
     'use_active_forms'         => false,
+    'use_dictionary_lbr'       => false,
 ];
